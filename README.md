@@ -25,12 +25,12 @@ Ronda 1: 45+32=77
 Ronda 2: 89-21=68
 Ronda 3: 7X8=56
 Ronda 4: 100/4=25
-Ronda 5: 18+9=27
+Ronda 5: 18+9=28
 =================================================== <[Resultados]> ===============================================
 Ronda 1: 77 es Correcto
 Ronda 2: 68 es Correcto
 Ronda 3: 56 es Correcto
 Ronda 4: 25 es Correcto
-Ronda 5: 27 es Incorrecto, el resultado era: 27
+Ronda 5: 28 es Incorrecto, el resultado era: 27
 Puntaje Final: 8
 ==================================================================================================================
