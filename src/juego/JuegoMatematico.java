@@ -15,14 +15,14 @@ public class JuegoMatematico {
             String respuestas = "";
             int puntos = 0;
 
+            System.out.println("=================================================== <[Juego]> ===================================================");
             while (ronda <= 4) {
                 int num1 = ran.nextInt(100) + 1;
                 int num2 = ran.nextInt(100) + 1;
-                float result = 0;
+                int result = 0;
                 float resp = 0;
-                int ope = ran.nextInt(4);
+                int ope = ran.nextInt(3);
 
-                System.out.println("=================================================== <[Juego]> ===================================================");
                 System.out.print("Ronda " + (ronda + 1) + ": ");
                 if (ope == 0) {
                     System.out.print(num1 + "+" + num2 + "=");
@@ -33,9 +33,6 @@ public class JuegoMatematico {
                 } else if (ope == 2) {
                     System.out.print(num1 + "X" + num2 + "=");
                     result = num1 * num2;
-                } else if (ope == 3) {
-                    System.out.print(num1 + "/" + num2 + "=");
-                    result = (float) num1 / num2;
                 }
                 resp = scan.nextFloat();
 
@@ -46,9 +43,9 @@ public class JuegoMatematico {
                 respuestas = respuestas + "Ronda " + (ronda + 1) + ": ";
                 if (result == resp) {
                     if (ronda <= 4) {
-                        respuestas = respuestas + resp + " es Correcto\n";
+                        respuestas = respuestas + df.format(resp) + " es Correcto\n";
                     } else {
-                        respuestas = respuestas + resp + " es Correcto";
+                        respuestas = respuestas + df.format(resp) + " es Correcto";
                     }
                     puntos = puntos + 10;
                 } else {
@@ -62,7 +59,7 @@ public class JuegoMatematico {
             }
             System.out.println("=================================================== <[Resultados]> ===============================================");
             System.out.print(respuestas);
-            System.out.print("Puntaje Final: " + (puntos / 5));
+            System.out.println("Puntaje Final: " + (puntos / 5));
             System.out.println("==================================================================================================================");
         } catch (InputMismatchException e) {
             System.out.println("=================================================== <[Error]> ====================================================");
